@@ -1,0 +1,26 @@
+module MakeCornOil 
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Make Oil from Corn {
+        /** Input **/
+        SkillRequired:Cooking=3,
+        keep MortarPestle,
+        keep Bowl,
+        keep Spoon,
+        Water=10,
+        Corn=30,
+
+        /** Process **/
+        Time:150,
+        Category:Cooking,
+        Sound:SliceMeat, 
+
+        /** Output **/
+        Result:OilVegetable=1,
+        OnGiveXP:Give10CookingXP,
+    }
+}
